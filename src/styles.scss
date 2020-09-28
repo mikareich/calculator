@@ -4,6 +4,7 @@ $text: #eceff4;
 $text-light: #e5e9f0;
 $text-dark: $bg;
 $primary: #8fbcbb;
+$error: #bf616a;
 * {
   box-sizing: border-box;
 }
@@ -33,9 +34,14 @@ body {
     align-items: flex-end;
     justify-content: end;
     padding: 10px 20px;
-    color: $text-light;
-    font-size: xx-large;
-    font-family: monospace;
+    .output {
+      color: $text-light;
+      font-size: xx-large;
+      font-family: monospace;
+      &.error {
+        color: $error;
+      }
+    }
   }
   .keyboard {
     display: grid;

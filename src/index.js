@@ -18,6 +18,8 @@ buttons.forEach((button) => {
   const taskRefferenc = taskRefferences[task]
 
   button.onclick = () => {
+    // reset look
+    outputSPAN.classList.remove('error')
     // execute specific task
     taskRefferenc(textContent)
     // render result
@@ -40,10 +42,15 @@ function calculate() {
     .replaceAll(',', '.')
     .replaceAll('÷', '/')
     .replaceAll('×', '*')
-
-  try {
-    input = Mexp.eval(parsedInput)
-  } catch (error) {
-    input = error.message
+  if (input !== '') {
+    try {
+      input = Mexp.eval(parsedInput)
+    } catch (error) {
+      input = error.message
+      outputSPAN.classList.add('error')
+    }
+  } else {
+    input = 'ಠ_ಠ'
+    outputSPAN.classList.add('error')
   }
 }
