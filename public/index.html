@@ -1,8 +1,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="wdata-taskth=device-wdata-taskth, initial-scale=1.0" />
     <title>Calculator</title>
+    <link rel="stylesheet" href="./bundle.css">
   </head>
   <body>
     <div class="calculator">
@@ -11,32 +12,34 @@
       </div>
       <div class="keyboard">
         <div class="main-keys">
-          <div class="key">(</div>
-          <div class="key">)</div>
-          <div class="key"></div>
+          <button data-task="addCharacter">(</button>
+          <button data-task="addCharacter">)</button>
+          <button data-task="addCharacter">&percnt;</button>
 
-          <div class="key">7</div>
-          <div class="key">8</div>
-          <div class="key">9</div>
+          <button data-task="addCharacter">7</button>
+          <button data-task="addCharacter">8</button>
+          <button data-task="addCharacter">9</button>
 
-          <div class="key">4</div>
-          <div class="key">5</div>
-          <div class="key">6</div>
+          <button data-task="addCharacter">4</button>
+          <button data-task="addCharacter">5</button>
+          <button data-task="addCharacter">6</button>
 
-          <div class="key">1</div>
-          <div class="key">2</div>
-          <div class="key">3</div>
+          <button data-task="addCharacter">1</button>
+          <button data-task="addCharacter">2</button>
+          <button data-task="addCharacter">3</button>
 
-          <div class="key">0</div>
+          <button data-task="addCharacter">0</button>
+          <button data-task="addCharacter">,</button>
         </div>
         <div class="side-keys">
-          <div class="key system" id="ac">AC</div>
-          <div class="key operator">&divide;</div>
-          <div class="key operator">&times;</div>
-          <div class="key operator">-</div>
-          <div class="key operator">+</div>
-          <div class="key system" id="calculate">=</div>
+          <button data-task="clear" class="system">AC</button>
+          <button data-task="addCharacter" class="operator">&divide;</button>
+          <button data-task="addCharacter" class="operator">&times;</button>
+          <button data-task="addCharacter" class="operator">-</button>
+          <button data-task="addCharacter" class="operator">+</button>
+          <button data-task="calculate" class="system" data-task="calculate">=</button>
         </div>
     </div>
+    <script src="./bundle.js"></script>
   </body>
 </html>
